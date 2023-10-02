@@ -49,13 +49,13 @@
         <ul class="menu-inner py-1">
             <!-- Dashboards -->
             <li class="menu-item">
-                <a href="{{route("admin.category.index")}}" class="menu-link">
+                <a href="" class="menu-link">
                     <i class="menu-icon tf-icons ti ti-smart-home"></i>
                     <div data-i18n="Email">داشبورد</div>
                 </a>
             </li>
             <li class="menu-item">
-                <a href="{{route("admin.category.index")}}" class="menu-link">
+                <a href="" class="menu-link">
                     <i class="menu-icon tf-icons ti ti-smart-home"></i>
                     <div data-i18n="Email">محصولات</div>
                 </a>
