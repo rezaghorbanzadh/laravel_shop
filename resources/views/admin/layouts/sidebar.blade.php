@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="" class="menu-link">
+                <a href="{{route("admin.category.index")}}" class="menu-link">
                     <i class="menu-icon tf-icons ti ti-smart-home"></i>
                     <div data-i18n="Email">محصولات</div>
                 </a>
