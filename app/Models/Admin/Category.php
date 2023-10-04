@@ -12,4 +12,9 @@ class Category extends Model
     protected $casts = ['image' => 'array'];
 
     protected $fillable = ['name' , 'description'  , 'image' , 'status' ];
+
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
 }
