@@ -14,7 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category=Category::all();
-        return view("admin.pages.category.index",compact("category"))->with("success","ورود موفقیت امیز بود");
+        return view("admin.pages.category.index",compact("category"));
     }
 
     /**
@@ -63,6 +63,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->back()->with("swal-error","دسته بندی با موفقیت حذف شد");
+        return redirect()->back()->with("success","دسته بندی با موفقیت حذف شد");
     }
 }

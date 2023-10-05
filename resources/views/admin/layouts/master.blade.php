@@ -23,7 +23,7 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         @yield('content')
                     </div>
-                    
+
                     @include('admin.layouts.footer')
 
                     <div class="content-backdrop fade"></div>
@@ -37,5 +37,6 @@
 
     @include('admin.layouts.script')
 </body>
-
+@yield("script")
 </html>
+

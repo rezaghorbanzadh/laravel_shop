@@ -68,3 +68,7 @@
 
     </div>
 @endsection
+@section("script")
+    @include("admin.alert.success")
+@endsection
+
