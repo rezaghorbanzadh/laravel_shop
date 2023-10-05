@@ -63,6 +63,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->back()->with("swal-error","دسته بندی با موفقیت حذف شد");
+        return redirect()->back();
     }
 }
