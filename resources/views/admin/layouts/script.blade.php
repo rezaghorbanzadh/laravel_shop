@@ -9,6 +9,12 @@
 
 <script src="{{ asset('assets/vendor/js/menu.js') }}"></script>
 
+<!-- Sweetalert -->
+<script src="{{ asset('assets/admin-assets/sweetalert/sweetalert2.all.min.js') }}"></script>
+<script src="{{ asset('assets/admin-assets/sweetalert/sweetalert2.min.js') }}"></script>
+
+
+
 <!-- Vendors JS -->
 @yield('vendor-js')
 
@@ -17,3 +23,4 @@
 
 <!-- Page JS -->
 @yield('page-js')
+

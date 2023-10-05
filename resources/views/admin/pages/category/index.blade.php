@@ -2,6 +2,7 @@
 
 @section('content')
 
+    @include("admin.alert.success")
 
     <div class="row mb-5">
         <table class="table table-striped table-hover">
@@ -45,14 +46,14 @@
                     @endif
 
                     <td>
-                        <a href=""
+                        <a href="{{route("admin.category.edit",$categories->id)}}"
                            class="btn btn-sm rounded-pill btn-info waves-effect waves-light">ویرایش</a>
 
-                        <form id="deleteButton" class="d-inline" action=""
+                        <form id="deleteButton" class="d-inline" action="{{route("admin.category.destroy",$categories->id)}}"
                               method="POST">
                             @csrf
                             @method('delete')
-                            <button type="button"
+                            <button type="submit"
                                     class="btn rounded-pill btn-sm btn-danger waves-effect waves-light deleteButton"
                                     id="deleteButton">حذف</button>
                         </form>

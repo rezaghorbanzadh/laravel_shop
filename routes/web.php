@@ -26,7 +26,7 @@ Route::prefix("admin")->group(function (){
         Route::post('/store' , [CategoryController::class , 'store'])->name('admin.category.store');
         Route::get('/edit/{category}' , [CategoryController::class , 'edit'])->name('admin.category.edit');
         Route::put('/update/{category}' , [CategoryController::class , 'update'])->name('admin.category.update');
-        Route::delete('/destroy/{id}' , [CategoryController::class , 'destroy'])->name('admin.category.destroy');
+        Route::delete('/destroy/{category}' , [CategoryController::class , 'destroy'])->name('admin.category.destroy');
     });
 
 
