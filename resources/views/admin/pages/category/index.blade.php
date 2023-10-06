@@ -1,10 +1,10 @@
 @extends('admin.layouts.master')
-
 @section('content')
-
     @include("admin.alert.success")
-
     <div class="row mb-5">
+        <div>
+            <a class="btn btn-success mb-4" href="{{route("admin.category.create")}}">ساخت دسته بندی جدبد</a>
+        </div>
         <table class="table table-striped table-hover">
             <thead>
             <tr>
@@ -23,8 +23,7 @@
                 <tr>
                     <th>{{ $categories->id }}</th>
                     <td>{{ $categories->name }}</td>
-                    <td>{{ \Str::limit($categories->description, 10, ' ...') }}</td>
-
+                    <td>{{ Illuminate\Support\Str::limit($categories->description, 10, ' ...') }}</td>
                     @if ($categories->parent_id !== null)
                         <td class="text-warning"> {{ $categories->parent->id }}- {{ $categories->parent->name }}</td>
                     @else

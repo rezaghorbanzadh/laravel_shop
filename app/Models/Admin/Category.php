@@ -9,9 +9,9 @@ class Category extends Model
 {
     use HasFactory ,SoftDeletes;
 
-    protected $casts = ['image' => 'array'];
 
-    protected $fillable = ['name' , 'description'  , 'image' , 'status' ];
+
+    protected $fillable = ['name' , 'description'  , 'status' ];
 
     public function parent()
     {

@@ -22,7 +22,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $category=Category::all();
+        return view("admin.pages.category.create",compact("category"));
     }
 
     /**
@@ -30,7 +31,19 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inputs =$request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'status' => 'required',
+            'parent_id' => 'required',
+        ]);
+
+        $result = Category::create($inputs);
+        $category=Category::all();
+
+        return to_route("admin.category.index",compact("category"))->with("success","دسته بندی با موفقیت اضافه شد");
+
+
     }
 
     /**
