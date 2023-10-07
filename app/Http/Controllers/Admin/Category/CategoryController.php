@@ -35,7 +35,9 @@ class CategoryController extends Controller
             'name' => 'required',
             'description' => 'required',
             'status' => 'required',
-            'parent_id' => 'required',
+            'parent_id' => 'nullable',
+
+
         ]);
 
         $result = Category::create($inputs);
@@ -57,17 +59,28 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Category $category)
     {
-        //
+
+        $allCategories = Category::whereNot('id', $category->id)->get();
+        return view("admin.pages.category.edit",compact("category","allCategories"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $inputs = $request->validate(
+            [
+                'name' => 'required|min:3|max:20',
+                'description' => 'required',
+                'status' => 'nullable',
+                'parent_id' => 'nullable|exists:categories,id',
+            ]);
+        $category->update($inputs);
+        return to_route("admin.category.index")->with("success","دسته بندی با موفقیت ویرایش شد");
+
     }
 
     /**
@@ -78,4 +91,25 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->back()->with("success","دسته بندی با موفقیت حذف شد");
     }
+
+
+    public function change(Category $category)
+    {
+        if ($category['status']==0){
+            $category['status'] = 1;
+            $category->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+
+        }elseif ($category['status']==1){
+            $category['status'] = 2;
+            $category->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+
+        }elseif ($category['status']==2){
+            $category['status'] = 1;
+            $category->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+        }
+    }
+
 }

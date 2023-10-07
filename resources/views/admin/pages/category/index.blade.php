@@ -34,12 +34,12 @@
 
                     @if ($categories->status == 1)
                         <td>
-                            <a href=""
+                            <a href="{{route("admin.category.change",$categories->id)}}"
                                class="btn rounded-pill btn-sm btn-success waves-effect waves-light">فعال</a>
                         </td>
                     @else
                         <td>
-                            <a href=""
+                            <a href="{{route("admin.category.change",$categories->id)}}"
                                class="btn rounded-pill btn-sm btn-danger waves-effect waves-light">غیر فعال</a>
                         </td>
                     @endif
