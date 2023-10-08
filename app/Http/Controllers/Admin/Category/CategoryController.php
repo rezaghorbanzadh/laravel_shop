@@ -76,7 +76,7 @@ class CategoryController extends Controller
                 'name' => 'required|min:3|max:20',
                 'description' => 'required',
                 'status' => 'nullable',
-                'parent_id' => 'nullable|exists:categories,id',
+                'parent_id' => 'nullable|',
             ]);
         $category->update($inputs);
         return to_route("admin.category.index")->with("success","دسته بندی با موفقیت ویرایش شد");
