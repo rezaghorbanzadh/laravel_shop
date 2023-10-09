@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Category\CategoryController;
+use App\Http\Controllers\Admin\Banner\BannerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,17 @@ Route::prefix("admin")->group(function (){
         Route::put('/update/{category}' , [CategoryController::class , 'update'])->name('admin.category.update');
         Route::delete('/destroy/{category}' , [CategoryController::class , 'destroy'])->name('admin.category.destroy');
         Route::get('/change/{category}' , [CategoryController::class , 'change'])->name('admin.category.change');
+    });
+
+    //admin-category
+    Route::prefix('banner')->group(function(){
+        Route::get('/' , [BannerController::class , 'index'])->name('admin.banner.index');
+        Route::get('/create' , [BannerController::class , 'create'])->name('admin.banner.create');
+        Route::post('/store' , [BannerController::class , 'store'])->name('admin.banner.store');
+        Route::get('/edit/{category}' , [BannerController::class , 'edit'])->name('admin.banner.edit');
+        Route::put('/update/{category}' , [BannerController::class , 'update'])->name('admin.banner.update');
+        Route::delete('/destroy/{category}' , [BannerController::class , 'destroy'])->name('admin.banner.destroy');
+        Route::get('/change/{category}' , [BannerController::class , 'change'])->name('admin.banner.change');
     });
 
 
