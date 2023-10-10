@@ -57,7 +57,13 @@
             <li class="menu-item">
                 <a href="{{route("admin.category.index")}}" class="menu-link">
                     <i class="menu-icon tf-icons ti ti-smart-home"></i>
-                    <div data-i18n="Email">محصولات</div>
+                    <div data-i18n="Email">دسته بندی</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{route("admin.banner.index")}}" class="menu-link">
+                    <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                    <div data-i18n="Email">بنر ها</div>
                 </a>
             </li>
 

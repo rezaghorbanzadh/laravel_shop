@@ -22,7 +22,7 @@ class BannerController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.pages.banner.create");
     }
 
     /**
@@ -30,7 +30,7 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('hi');
     }
 
     /**
