@@ -30,7 +30,14 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        dd('hi');
+        $inputs = $request->validate(
+            [
+                'image' => 'required',
+                'url' => 'required',
+            ]);
+
+        $banner = Banner::create($inputs);
+        return to_route("admin.banner.index",compact("banner"))->with("success","دسته بندی با موفقیت اضافه شد");
     }
 
     /**
