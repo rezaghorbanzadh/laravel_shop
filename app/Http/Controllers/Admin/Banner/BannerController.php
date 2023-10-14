@@ -35,6 +35,29 @@ class BannerController extends Controller
                 'image' => 'required',
                 'url' => 'required',
             ]);
+        if($request->hasFile('image')) {
+            if (!empty($banner->image)) {
+                file("$banner->image")->delete();
+            }
+            $file = $request->file('image');
+            $filename = time().'_'.$file->getClientOriginalName();
+
+            // File upload location
+            $location = 'uploads';
+
+            // Upload file
+            $file->move($location,$filename);
+            $inputs['image']=$filename;
+        }
+        else
+        {
+            if (isset($inputs['currentImage']) && !empty($banner->image)) {
+                $image = $banner->image;
+                $image['currentImage'] = $inputs['currentImage'];
+                $inputs['image'] = $image;
+
+            }
+        }
 
         $banner = Banner::create($inputs);
         return to_route("admin.banner.index",compact("banner"))->with("success","دسته بندی با موفقیت اضافه شد");

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text("image")->collation("utf8_general_ci");
             $table->string("url")->collation("utf8_general_ci");
+            $table->timestamps();
         });
     }
 
