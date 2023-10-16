@@ -36,10 +36,10 @@ Route::prefix("admin")->group(function (){
         Route::get('/' , [BannerController::class , 'index'])->name('admin.banner.index');
         Route::get('/create' , [BannerController::class , 'create'])->name('admin.banner.create');
         Route::post('/store' , [BannerController::class , 'store'])->name('admin.banner.store');
-        Route::get('/edit/{category}' , [BannerController::class , 'edit'])->name('admin.banner.edit');
-        Route::put('/update/{category}' , [BannerController::class , 'update'])->name('admin.banner.update');
-        Route::delete('/destroy/{category}' , [BannerController::class , 'destroy'])->name('admin.banner.destroy');
-        Route::get('/change/{category}' , [BannerController::class , 'change'])->name('admin.banner.change');
+        Route::get('/edit/{banner}' , [BannerController::class , 'edit'])->name('admin.banner.edit');
+        Route::put('/update/{banner}' , [BannerController::class , 'update'])->name('admin.banner.update');
+        Route::delete('/destroy/{banner}' , [BannerController::class , 'destroy'])->name('admin.banner.destroy');
+        Route::get('/change/{banner}' , [BannerController::class , 'change'])->name('admin.banner.change');
     });
 
 
