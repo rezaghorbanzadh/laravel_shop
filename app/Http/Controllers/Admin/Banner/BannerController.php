@@ -83,9 +83,26 @@ class BannerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Banner $banner)
     {
-        //
+
+        $input=$request->all();
+
+        //save image
+        if($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time().'_'.$file->getClientOriginalName();
+
+            // File upload location
+            $location = 'uploads';
+
+            // Upload file
+            $file->move($location,$filename);
+            $input['image']=$filename;
+        }
+
+        $banner->update($input);
+        return redirect()->route('admin.banner.index')->with("success","تغیرات با موفقیت ذخیره شد");
     }
 
     /**
