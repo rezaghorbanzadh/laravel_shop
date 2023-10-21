@@ -41,10 +41,8 @@ class BannerController extends Controller
             }
             $file = $request->file('image');
             $filename = time().'_'.$file->getClientOriginalName();
-
             // File upload location
             $location = 'uploads';
-
             // Upload file
             $file->move($location,$filename);
             $inputs['image']=$filename;
@@ -55,14 +53,11 @@ class BannerController extends Controller
                 $image = $banner->image;
                 $image['currentImage'] = $inputs['currentImage'];
                 $inputs['image'] = $image;
-
             }
         }
-
         $banner = Banner::create($inputs);
         return to_route("admin.banner.index",compact("banner"))->with("success","دسته بندی با موفقیت اضافه شد");
     }
-
     /**
      * Display the specified resource.
      */
