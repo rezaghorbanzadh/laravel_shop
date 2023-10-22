@@ -80,9 +80,7 @@ class BannerController extends Controller
      */
     public function update(Request $request, Banner $banner)
     {
-
         $input=$request->all();
-
         //save image
         if($request->hasFile('image')) {
             $file = $request->file('image');
