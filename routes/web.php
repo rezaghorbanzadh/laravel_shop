@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Banner\BannerController;
+use App\Http\Controllers\Admin\Comment\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,6 +41,16 @@ Route::prefix("admin")->group(function (){
         Route::put('/update/{banner}' , [BannerController::class , 'update'])->name('admin.banner.update');
         Route::delete('/destroy/{banner}' , [BannerController::class , 'destroy'])->name('admin.banner.destroy');
         Route::get('/change/{banner}' , [BannerController::class , 'change'])->name('admin.banner.change');
+    });
+    //admin-category
+    Route::prefix('comment')->group(function(){
+        Route::get('/' , [CommentController::class , 'index'])->name('admin.comment.index');
+        Route::get('/create' , [CommentController::class , 'create'])->name('admin.comment.create');
+        Route::post('/store' , [CommentController::class , 'store'])->name('admin.comment.store');
+        Route::get('/edit/{comment}' , [CommentController::class , 'edit'])->name('admin.comment.edit');
+        Route::put('/update/{comment}' , [CommentController::class , 'update'])->name('admin.comment.update');
+        Route::delete('/destroy/{comment}' , [CommentController::class , 'destroy'])->name('admin.comment.destroy');
+        Route::get('/change/{comment}' , [CommentController::class , 'change'])->name('admin.comment.change');
     });
 
 
