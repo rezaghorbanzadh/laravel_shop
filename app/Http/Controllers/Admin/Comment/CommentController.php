@@ -14,7 +14,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comment=Comment::all();
+        return view("admin.pages.comment.index",compact("comment"));
     }
 
     /**
