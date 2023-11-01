@@ -66,6 +66,12 @@
                     <div data-i18n="Email">بنر ها</div>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="{{route("admin.comment.index")}}" class="menu-link">
+                    <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                    <div data-i18n="Email"> کامنت ها</div>
+                </a>
+            </li>
 
 
             <!-- Layouts -->
