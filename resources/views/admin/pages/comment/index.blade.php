@@ -58,8 +58,7 @@
                     @endif
 
                     <td>
-                        <a href="{{route("admin.category.edit",$comments->id)}}"
-                           class="btn btn-sm rounded-pill btn-info waves-effect waves-light">ویرایش</a>
+
 
                         <form id="deleteButton" class="d-inline" action="{{route("admin.category.destroy",$comments->id)}}"
                               method="POST">
