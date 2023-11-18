@@ -2,9 +2,7 @@
 @section('content')
     @include("admin.alert.success")
     <div class="row mb-5">
-        <div>
-            <a class="btn btn-success mb-4 disabled" >ساخت  کامنت جدید  </a>
-        </div>
+
         <table class="table table-striped table-hover">
             <thead>
             <tr>
