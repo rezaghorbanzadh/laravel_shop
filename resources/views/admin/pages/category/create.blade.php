@@ -19,7 +19,7 @@
                     <div class="mb-3 row">
                         <label class="col-md-2 col-form-label">توضیحات</label>
                         <div class="col-md-10">
-                            <textarea class="form-control mb-2" placeholder="توضیحات را وارد کنید ..." name="description" cols="30" rows="10">{{ old('description') }}</textarea>
+                            <textarea  class="form-control mb-2" placeholder="توضیحات را وارد کنید ..." name="description" cols="30" rows="10">{{ old('description') }}</textarea>
                             @error('description')
                             <span class="text-danger mt-3">{{ $message }}</span>
                             @enderror
@@ -64,4 +64,14 @@
 @endsection
 @section("script")
     @include("admin.alert.success")
+
+    <script src="{{asset("assets/admin-assets/ckeditor/ckeditor.js")}}"></script>
+
+
+    <script>
+        CKEDITOR.replace("ِdescription");
+
+    </script>
+
 @endsection
+
