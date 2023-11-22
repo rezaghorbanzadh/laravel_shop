@@ -31,7 +31,7 @@
                         <a href="{{route("admin.banner.edit",$banner->id)}}"
                            class="btn btn-sm rounded-pill btn-info waves-effect waves-light">ویرایش</a>
 
-                        <form id="deleteButton" class="d-inline" action="{{route("admin.category.destroy",$banner->id)}}"
+                        <form id="deleteButton" class="d-inline" action="{{route("admin.banner.destroy",$banner->id)}}"
                               method="POST">
                             @csrf
                             @method('delete')
