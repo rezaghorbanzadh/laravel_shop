@@ -34,9 +34,7 @@
                         <form id="deleteButton" class="d-inline" action="{{route("admin.banner.destroy",$banner->id)}}" method="POST">
                             @csrf
                             @method('delete')
-                            <button type="submit"
-                                    class="btn rounded-pill btn-sm btn-danger waves-effect waves-light deleteButton"
-                                    id="deleteButton">حذف</button>
+                            <button type="submit" class="btn rounded-pill btn-sm btn-danger waves-effect waves-light deleteButton" id="deleteButton">حذف</button>
                         </form>
 
                     </td>
