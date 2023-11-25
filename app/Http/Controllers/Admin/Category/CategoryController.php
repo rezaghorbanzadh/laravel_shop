@@ -95,20 +95,20 @@ class CategoryController extends Controller
 
     public function change(Category $category)
     {
-        if ($category['status']==0){
+        if ($category['status'] == 0) {
             $category['status'] = 1;
             $category->save();
-            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+            return redirect()->back()->with("success", "وضعیت با موفقیت تغییر کرد");
 
-        }elseif ($category['status']==1){
+        } elseif ($category['status'] == 1) {
             $category['status'] = 2;
             $category->save();
-            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+            return redirect()->back()->with("success", "وضعیت با موفقیت تغییر کرد");
 
-        }elseif ($category['status']==2){
+        } elseif ($category['status'] == 2) {
             $category['status'] = 1;
             $category->save();
-            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+            return redirect()->back()->with("success", "وضعیت با موفقیت تغییر کرد");
         }
     }
 

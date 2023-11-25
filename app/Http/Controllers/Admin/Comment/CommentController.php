@@ -18,51 +18,39 @@ class CommentController extends Controller
         return view("admin.pages.comment.index",compact("comment"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreCommentRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateCommentRequest $request, Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+        return redirect()->back()->with("success","کامنت با موفقیت حذف شد");    }
+
+    public function change(Comment $comment){
+        if ($comment['status']==0){
+            $comment['status'] = 1;
+            $comment->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+
+        }elseif ($comment['status']==1){
+            $comment['status'] = 2;
+            $comment->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+
+        }elseif ($comment['status']==2){
+            $comment['status'] = 1;
+            $comment->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+        }
+    }
+    public function approved(Comment $comment){
+        if ($comment['approved']==0){
+            $comment['approved'] = 1;
+            $comment->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+
+        }else{
+            $comment['approved'] = 0;
+            $comment->save();
+            return redirect()->back()->with("success","وضعیت با موفقیت تغییر کرد");
+
+        }
     }
 }

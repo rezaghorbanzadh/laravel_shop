@@ -31,4 +31,5 @@
 <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
 <script src="{{ asset('assets/vendor/js/template-customizer.js') }}"></script>
 <script src="{{ asset('assets/js/config.js') }}"></script>
+<script src="https://kit.fontawesome.com/5bb422a0d8.js" crossorigin="anonymous"></script>
 

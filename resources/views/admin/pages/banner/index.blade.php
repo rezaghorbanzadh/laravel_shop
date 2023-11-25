@@ -26,7 +26,6 @@
                             <span class="text-danger">ندارد</span>
                         @endif
                     </td>
-
                     <td>
                         <a href="{{route("admin.banner.edit",$banner->id)}}"
                            class="btn btn-sm rounded-pill btn-info waves-effect waves-light">ویرایش</a>
@@ -36,15 +35,11 @@
                             @method('delete')
                             <button type="submit" class="btn rounded-pill btn-sm btn-danger waves-effect waves-light deleteButton" id="deleteButton">حذف</button>
                         </form>
-
                     </td>
                 </tr>
             @endforeach
-
-
             </tbody>
         </table>
-
     </div>
 @endsection
 @section("script")

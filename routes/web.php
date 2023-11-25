@@ -51,6 +51,7 @@ Route::prefix("admin")->group(function (){
         Route::put('/update/{comment}' , [CommentController::class , 'update'])->name('admin.comment.update');
         Route::delete('/destroy/{comment}' , [CommentController::class , 'destroy'])->name('admin.comment.destroy');
         Route::get('/change/{comment}' , [CommentController::class , 'change'])->name('admin.comment.change');
+        Route::get('/approved/{comment}' , [CommentController::class , 'approved'])->name('admin.approved.change');
     });
 
 

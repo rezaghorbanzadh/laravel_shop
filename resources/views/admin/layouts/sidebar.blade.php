@@ -56,19 +56,19 @@
             </li>
             <li class="menu-item">
                 <a href="{{route("admin.category.index")}}" class="menu-link">
-                    <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                    <i class="menu-icon tf-icons ti ti-layout-grid"></i>
                     <div data-i18n="Email">دسته بندی</div>
                 </a>
             </li>
             <li class="menu-item">
                 <a href="{{route("admin.banner.index")}}" class="menu-link">
-                    <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                    <i class="menu-icon fa-solid fa-money-check" style="color: #a0a8b6;"></i>
                     <div data-i18n="Email">بنر ها</div>
                 </a>
             </li>
             <li class="menu-item">
                 <a href="{{route("admin.comment.index")}}" class="menu-link">
-                    <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                    <i class=" menu-icon fa-regular fa-comment" style="color: #a0a8b6;"></i>
                     <div data-i18n="Email"> کامنت ها</div>
                 </a>
             </li>

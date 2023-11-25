@@ -15,6 +15,7 @@
                 <th>تعداد دیده شدن</th>
                 <th>تایید شده</th>
                 <th> وضعیت</th>
+                <th> تایید توسط ادمین</th>
             </tr>
             </thead>
             <tbody>
@@ -24,41 +25,56 @@
                     <th>{{ $comments->id }}</th>
                     <td>{{ Illuminate\Support\Str::limit($comments->body, 10, ' ...') }}</td>
                     @if ($comments->parent_id !== null)
-                        <td class="text-warning"> {{ $comments->parent->id }}- {{ $comments->parent->name }}</td>
+                        <td class="text-warning"> {{ $comments->parent->id }}- {{ $comments->parent->body }}</td>
                     @else
                         <td class="text-danger">ندارد</td>
                     @endif
                     @if ($comments->author_id !== null)
-                        <td class="text-warning"> {{ $comments->author->id }}- {{ $comments->author->name }}</td>
+                        <td class="text-warning"> {{ $comments->author->id }}- {{ $comments->author->username }}</td>
                     @else
                         <td class="text-danger">ندارد</td>
                     @endif
                     @if ($comments->product_id !== null)
-                        <td class="text-warning"> {{ $comments->product->id }}- {{ $comments->product->name }}</td>
+                        <td class="text-warning"> {{  $comments->product->id }}- {{ $comments->product->name }}</td>
                     @else
                         <td class="text-danger">ندارد</td>
                     @endif
 
                     <td>{{ $comments->commentable_type }}</td>
                     <td>{{ $comments->seen }}</td>
-                    <td>{{ $comments->approved }}</td>
-
+                    @if($comments->approved == 0)
+                    <td style="color: red">تایید نشده</td>
+                    @else
+                        <td style="color: greenyellow">تایید  شده</td>
+                    @endif
                     @if ($comments->status == 1)
                         <td>
-                            <a href="{{route("admin.category.change",$comments->id)}}"
+                            <a href="{{route("admin.comment.change",$comments->id)}}"
                                class="btn rounded-pill btn-sm btn-success waves-effect waves-light">فعال</a>
                         </td>
                     @else
                         <td>
-                            <a href="{{route("admin.category.change",$comments->id)}}"
+                            <a href="{{route("admin.comment.change",$comments->id)}}"
                                class="btn rounded-pill btn-sm btn-danger waves-effect waves-light">غیر فعال</a>
+                        </td>
+                    @endif
+                    @if ($comments->approved ==0)
+                        <td>
+                            <a href="{{route("admin.approved.change",$comments->id)}}"
+                               class="btn rounded-pill btn-sm btn-danger waves-effect waves-light">غیر فعال</a>
+
+                        </td>
+                    @else
+                        <td>
+                            <a href="{{route("admin.approved.change",$comments->id)}}"
+                               class="btn rounded-pill btn-sm btn-success waves-effect waves-light">تایید</a>
                         </td>
                     @endif
 
                     <td>
 
 
-                        <form id="deleteButton" class="d-inline" action="{{route("admin.category.destroy",$comments->id)}}"
+                        <form id="deleteButton" class="d-inline" action="{{route("admin.comment.destroy",$comments->id)}}"
                               method="POST">
                             @csrf
                             @method('delete')
