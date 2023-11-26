@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text("description")->nullable();
             $table->integer("inventory")->nullable();
             $table->integer("img_product")->nullable();
-
+            $table->foreignId('user_id')->constrained('users');
             $table->integer("discount")->nullable();
             $table->tinyInteger('status')->default(0);
             $table->timestamps();

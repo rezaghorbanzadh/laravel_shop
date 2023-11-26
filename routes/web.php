@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Banner\BannerController;
 use App\Http\Controllers\Admin\Comment\CommentController;
+use App\Http\Controllers\facerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,7 @@ use App\Http\Controllers\Admin\Comment\CommentController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get("/",[facerController::class,"index"]);
 Route::prefix("admin")->group(function (){
 
     //admin-dashboard
