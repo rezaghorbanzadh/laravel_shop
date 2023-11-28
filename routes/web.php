@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Banner\BannerController;
 use App\Http\Controllers\Admin\Comment\CommentController;
 use App\Http\Controllers\facerController;
+use App\Http\Controllers\Admin\User\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,6 +54,13 @@ Route::prefix("admin")->group(function (){
         Route::delete('/destroy/{comment}' , [CommentController::class , 'destroy'])->name('admin.comment.destroy');
         Route::get('/change/{comment}' , [CommentController::class , 'change'])->name('admin.comment.change');
         Route::get('/approved/{comment}' , [CommentController::class , 'approved'])->name('admin.approved.change');
+    });
+    //admin-user
+    Route::prefix('user')->group(function(){
+        Route::get('/' , [UserController::class , 'index'])->name('admin.user.index');
+        Route::get('/adminUser' , [UserController::class , 'adminUser'])->name('admin.user.adminUser');
+        Route::delete('/destroy/{user}' , [UserController::class , 'destroy'])->name('admin.user.destroy');
+
     });
 
 
