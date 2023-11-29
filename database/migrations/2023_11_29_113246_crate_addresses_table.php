@@ -11,14 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('carts', function (Blueprint $table) {
+        Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('category_id')->constrained('category');
-            $table->integer('number')->default(1);
+            $table->string('postal_code');
+            $table->text('address');
+            $table->string('unit');
+            $table->string('recipient_first_name')->nullable();
+            $table->string('recipient_last_name')->nullable();
+            $table->string('mobile')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
             $table->softDeletes();
-
         });
     }
 

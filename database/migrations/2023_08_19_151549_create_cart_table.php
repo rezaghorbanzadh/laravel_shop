@@ -23,6 +23,8 @@ return new class extends Migration
             $table->bigInteger("final_price")->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('product_id')->constrained('products');
+            $table->foreignId('category_id')->constrained('categories');
+
             $table->timestamps();
             $table->softDeletes();
         });
