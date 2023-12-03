@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Banner\BannerController;
 use App\Http\Controllers\Admin\Comment\CommentController;
 use App\Http\Controllers\facerController;
+use App\Http\Controllers\Customer\HomeController;
 use App\Http\Controllers\Admin\User\UserController;
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\Admin\User\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get("/",[facerController::class,"index"]);
+Route::get("/",[HomeController::class,"index"]);
 Route::prefix("admin")->group(function (){
 
     //admin-dashboard
