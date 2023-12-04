@@ -14,7 +14,8 @@ class BannerController extends Controller
     public function index()
     {
         $banners=Banner::all();
-        return view("admin.pages.banner.index",compact("banners"));
+        $position=Banner::$positions;
+        return view("admin.pages.banner.index",compact("banners",'position'));
     }
 
     /**
@@ -30,10 +31,14 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
+
         $inputs = $request->validate(
             [
                 'image' => 'required',
                 'url' => 'required',
+                'title' => 'required',
+                'status' => 'required',
+                'position' => 'required',
             ]);
         if($request->hasFile('image')) {
             if (!empty($banner->image)) {

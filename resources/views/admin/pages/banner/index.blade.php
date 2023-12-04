@@ -10,7 +10,11 @@
             <tr>
                 <th>آیدی</th>
                 <th>ادرس</th>
+                <th>عنوان</th>
+                <th>موقعیت </th>
+                <th>وضعیت </th>
                 <th>تصویر </th>
+
             </tr>
             </thead>
             <tbody>
@@ -19,6 +23,10 @@
                 <tr>
                     <th>{{ $banner->id }}</th>
                     <td>{{ $banner->url }}</td>
+                    <td>{{ $banner->title }}</td>
+                    <td>{{ $position[$banner->position] }}</td>
+                    <td>{{ $banner->status }}</td>
+
                     <td>
                         @if (!empty($banner->image))
                             <img style="width: 80px;" src="{{ asset("uploads/$banner->image")}}" alt="{{ $banner->id }}">
