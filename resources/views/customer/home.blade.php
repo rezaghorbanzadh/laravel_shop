@@ -187,7 +187,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/16.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/16.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>گوشی موبایل سامسونگ مدل Galaxy A12 SM-A125F/DS دو ...</h3></section>
@@ -205,7 +205,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/14.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/14.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>گوشی موبایل شیائومی مدل POCO M3 PRO 5G M2103K19PG ...</h3></section>
@@ -223,7 +223,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/10.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/10.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>مجموعه کتاب من پیش از تو، پس از تو، باز هم من</h3></section>
@@ -241,7 +241,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/11.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/11.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب سلخ اثر غزاله شکوهی</h3></section>
@@ -259,7 +259,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/13.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/13.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب تختخوابت را مرتب کن اثر ژنرال ویلیام مک ریون</h3></section>
@@ -287,8 +287,8 @@
         <section class="container-xxl">
             <!-- two column-->
             <section class="row py-4">
-                <section class="col-12 col-md-6 mt-2 mt-md-0"><img class="d-block rounded-2 w-100" src="assets/images/ads/two-col-1.jpg" alt=""></section>
-                <section class="col-12 col-md-6 mt-2 mt-md-0"><img class="d-block rounded-2 w-100" src="assets/images/ads/two-col-2.jpg" alt=""></section>
+                <section class="col-12 col-md-6 mt-2 mt-md-0"><img class="d-block rounded-2 w-100" src="{{ asset('assets/customer-assets/images/ads/two-col-1.jpg') }}" alt=""></section>
+                <section class="col-12 col-md-6 mt-2 mt-md-0"><img class="d-block rounded-2 w-100" src="{{ asset('assets/customer-assets/images/ads/two-col-2.jpg') }}" alt=""></section>
             </section>
 
         </section>
@@ -325,7 +325,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/2.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/2.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>دستگاه آبمیوه گیری دنویر با کد 1016</h3></section>
@@ -352,7 +352,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/1.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/1.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب اٍر مرکب اثر دارن هاردی با کد 87</h3></section>
@@ -370,7 +370,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/3.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/3.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-name"><h3>پکیج آموزش خطاطی و خوشنویسی با کد 624</h3></section>
                                                 <section class="product-price-wrapper">
@@ -394,7 +394,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/4.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/4.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>مجموعه داستان های هزار و یک شب</h3></section>
@@ -416,7 +416,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/5.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/5.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب اطلاعات عمومی انتشارات فارابی با کد 3087</h3></section>
@@ -434,7 +434,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/6.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/6.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب شیوه گرگ اثر جردن بلفورت</h3></section>
@@ -456,7 +456,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/7.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/7.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>مجموعه داستان های قصه های مشهور جهان</h3></section>
@@ -474,7 +474,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/8.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/8.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب برای سفر خودآموز مکالمات انگلیسی</h3></section>
@@ -492,7 +492,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/9.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/9.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب آدم های سمی اثر لیلیان گلاس</h3></section>
@@ -514,7 +514,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/10.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/10.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>مجموعه کتاب من پیش از تو، پس از تو، باز هم من</h3></section>
@@ -532,7 +532,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/11.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/11.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب سلخ اثر غزاله شکوهی</h3></section>
@@ -550,7 +550,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/12.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/12.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب بیشعوری اثر جردن بلفورت</h3></section>
@@ -568,7 +568,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="assets/images/products/13.jpg" alt="">
+                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/13.jpg') }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>کتاب تختخوابت را مرتب کن اثر ژنرال ویلیام مک ریون</h3></section>
@@ -597,7 +597,7 @@
             <!-- one column -->
             <section class="row py-4">
                 <section class="col">
-                    <img class="d-block rounded-2 w-100" src="assets/images/ads/one-col-1.jpg" alt="">
+                    <img class="d-block rounded-2 w-100" src="{{ asset('assets/customer-assets/images/ads/one-col-1.jpg') }}" alt="">
                 </section>
             </section>
 
@@ -626,62 +626,62 @@
                         <section class="brands dark-owl-nav owl-carousel owl-theme">
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/huawei.jpg" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/huawei.jpg') }} " alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/adata.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/adata.png') }}" alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/casio.jpg" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/casio.jpg') }}" alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/gplus.jpg" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/gplus.jpg') }}" alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/logitech.jpg" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/logitech.jpg') }}" alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/nokia.jpg" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/nokia.jpg') }}" alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/pakshoma.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/pakshoma.png') }} " alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/panasonic.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/panasonic.png') }} " alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/parskhazar.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/parskhazar.png') }} " alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/samsung.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/samsung.png') }} " alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/snowa.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/snowa.png') }} " alt=""></a>
                                 </section>
                             </section>
                             <section class="item">
                                 <section class="brand-item">
-                                    <a href="#"><img class="rounded-2" src="assets/images/brand/xvision.png" alt=""></a>
+                                    <a href="#"><img class="rounded-2" src="{{ asset('assets/customer-assets/images/brand/xvision.png') }} " alt=""></a>
                                 </section>
                             </section>
                         </section>
