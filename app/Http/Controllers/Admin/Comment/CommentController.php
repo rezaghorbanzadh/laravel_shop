@@ -21,7 +21,8 @@ class CommentController extends Controller
     public function destroy(Comment $comment)
     {
         $comment->delete();
-        return redirect()->back()->with("success","کامنت با موفقیت حذف شد");    }
+        return redirect()->back()->with("success","کامنت با موفقیت حذف شد");
+    }
 
     public function change(Comment $comment){
         if ($comment['status']==0){

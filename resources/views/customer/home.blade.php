@@ -9,17 +9,23 @@
         <section class="row">
             <section class="col-md-8 pe-md-1 ">
                 <section id="slideshow" class="owl-carousel owl-theme">
-                    <section class="item"><a class="w-100 d-block h-auto text-decoration-none" href="#"><img class="w-100 rounded-2 d-block h-auto" src="{{ asset('assets/customer-assets/images/slideshow/1.jpg') }} " alt="1"></a></section>
-                    <section class="item"><a class="w-100 d-block h-auto text-decoration-none" href="#"><img class="w-100 rounded-2 d-block h-auto" src="{{ asset('assets/customer-assets/images/slideshow/2.jpg') }}" alt="2"></a></section>
-                    <section class="item"><a class="w-100 d-block h-auto text-decoration-none" href="#"><img class="w-100 rounded-2 d-block h-auto" src="{{ asset('assets/customer-assets/images/slideshow/3.jpg') }}" alt="3"></a></section>
-                    <section class="item"><a class="w-100 d-block h-auto text-decoration-none" href="#"><img class="w-100 rounded-2 d-block h-auto" src="{{ asset('assets/customer-assets/images/slideshow/4.jpg') }}" alt="4"></a></section>
-                    <section class="item"><a class="w-100 d-block h-auto text-decoration-none" href="#"><img class="w-100 rounded-2 d-block h-auto" src="{{ asset('assets/customer-assets/images/slideshow/5.jpg') }}" alt="5"></a></section>
-                    <section class="item"><a class="w-100 d-block h-auto text-decoration-none" href="#"><img class="w-100 rounded-2 d-block h-auto" src="{{ asset('assets/customer-assets/images/slideshow/6.gif') }}" alt="6"></a></section>
+                   @foreach($slideShow as $slideshows)
+                    <section class="item">
+                        <a class="w-100 d-block h-auto text-decoration-none" href="#">
+                            <img class="w-100 rounded-2 d-block h-auto" src="{{ asset("uploads/$slideshows->image") }} " alt="1">
+                        </a>
+                    </section>
+                    @endforeach
                 </section>
             </section>
             <section class="col-md-4 ps-md-1 mt-2 mt-md-0">
-                <section class="mb-2"><a href="#" class="d-block"><img class="w-100 rounded-2" src="assets/images/slideshow/12.gif" alt=""></a></section>
-                <section class="mb-2"><a href="#" class="d-block"><img class="w-100 rounded-2" src="assets/images/slideshow/11.jpg" alt=""></a></section>
+                @foreach($topBanners as $topBanner)
+                <section class="mb-2">
+                    <a href="#" class="d-block">
+                        <img class="w-100 rounded-2" src="{{ asset("uploads/$topBanner->image") }}" alt="">
+                    </a>
+                </section>
+                @endforeach
             </section>
         </section>
     </section>
@@ -49,6 +55,7 @@
                         <section class="lazyload-wrapper" >
                             <section class="lazyload light-owl-nav owl-carousel owl-theme">
 
+                                @foreach($mostVisitProducts as $mostVisitProduct )
                                 <section class="item">
                                     <section class="lazyload-item-wrapper">
                                         <section class="product">
@@ -56,16 +63,18 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/21.jpg') }}" alt="">
+                                                    <img class="" src="{{ asset("uploads/$mostVisitProduct->image") }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
-                                                <section class="product-name"><h3>گوشی موبایل شیائومی مدل POCO X3 Pro M2102J20SG دو ...</h3></section>
+                                                <section class="product-name"><h3>{{$mostVisitProduct->name}}</h3></section>
                                                 <section class="product-price-wrapper">
+                                                    @if($mostVisitProduct->discount != null)
                                                     <section class="product-discount">
-                                                        <span class="product-old-price">6,895,000 </span>
-                                                        <span class="product-discount-amount">10%</span>
+                                                        <span class="product-old-price">{{$mostVisitProduct->oldprice}} </span>
+                                                        <span class="product-discount-amount">{{$mostVisitProduct->discount}}%</span>
                                                     </section>
-                                                    <section class="product-price">6,264،000 تومان</section>
+                                                    @endif
+                                                    <section class="product-price">{{$mostVisitProduct->price}} تومان</section>
                                                 </section>
                                                 <section class="product-colors">
                                                     <section class="product-colors-item" style="background-color: white;"></section>
@@ -76,201 +85,7 @@
                                         </section>
                                     </section>
                                 </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/22.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>گوشی موبایل سامسونگ مدل Galaxy A32 SM-A325F/DS دو ...</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">6,249,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/17.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-name"><h3>کیف هندزفری جانتا مدل 141مجموعه 3 عددی</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-discount">
-                                                        <span class="product-old-price">165,000 </span>
-                                                        <span class="product-discount-amount">46%</span>
-                                                    </section>
-                                                    <section class="product-price">89،000 تومان</section>
-                                                </section>
-                                                <section class="product-colors">
-                                                    <section class="product-colors-item" style="background-color: yellow;"></section>
-                                                    <section class="product-colors-item" style="background-color: green;"></section>
-                                                    <section class="product-colors-item" style="background-color: white;"></section>
-                                                    <section class="product-colors-item" style="background-color: blue;"></section>
-                                                    <section class="product-colors-item" style="background-color: red;"></section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/19.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>گوشی موبایل شیائومی مدل POCO M3 M2010J19CG دو سیم‌...</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">4,199،000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/20.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>گوشی موبایل سامسونگ مدل Galaxy A21S SM-A217F/DS دو...</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">4,149,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/18.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>کیف رودوشی چرم جانتا مدل D078</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-discount">
-                                                        <span class="product-old-price">745,000 </span>
-                                                        <span class="product-discount-amount">42%</span>
-                                                    </section>
-                                                    <section class="product-price">432،000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/16.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>گوشی موبایل سامسونگ مدل Galaxy A12 SM-A125F/DS دو ...</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">3,799,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/14.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>گوشی موبایل شیائومی مدل POCO M3 PRO 5G M2103K19PG ...</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">5,499,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/10.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>مجموعه کتاب من پیش از تو، پس از تو، باز هم من</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">221,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/11.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>کتاب سلخ اثر غزاله شکوهی</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">870,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-                                <section class="item">
-                                    <section class="lazyload-item-wrapper">
-                                        <section class="product">
-                                            <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
-                                            <a class="product-link" href="#">
-                                                <section class="product-image">
-                                                    <img class="" src="{{ asset('assets/customer-assets/images/products/13.jpg') }}" alt="">
-                                                </section>
-                                                <section class="product-colors"></section>
-                                                <section class="product-name"><h3>کتاب تختخوابت را مرتب کن اثر ژنرال ویلیام مک ریون</h3></section>
-                                                <section class="product-price-wrapper">
-                                                    <section class="product-price">89,000 تومان</section>
-                                                </section>
-                                            </a>
-                                        </section>
-                                    </section>
-                                </section>
-
+                                @endforeach
                             </section>
                         </section>
                     </section>
@@ -287,8 +102,11 @@
         <section class="container-xxl">
             <!-- two column-->
             <section class="row py-4">
-                <section class="col-12 col-md-6 mt-2 mt-md-0"><img class="d-block rounded-2 w-100" src="{{ asset('assets/customer-assets/images/ads/two-col-1.jpg') }}" alt=""></section>
-                <section class="col-12 col-md-6 mt-2 mt-md-0"><img class="d-block rounded-2 w-100" src="{{ asset('assets/customer-assets/images/ads/two-col-2.jpg') }}" alt=""></section>
+                @foreach($middleBanners as $middleBanner)
+                <section class="col-12 col-md-6 mt-2 mt-md-0">
+                    <img class="d-block rounded-2 w-100" src="{{ asset("uploads/$middleBanner->image") }}" alt="">
+                </section>
+                @endforeach
             </section>
 
         </section>
@@ -596,9 +414,12 @@
         <section class="container-xxl">
             <!-- one column -->
             <section class="row py-4">
+                @foreach($bottomBanner as $bottom)
                 <section class="col">
-                    <img class="d-block rounded-2 w-100" src="{{ asset('assets/customer-assets/images/ads/one-col-1.jpg') }}" alt="">
+
+                    <img class="d-block rounded-2 w-100" src="{{ asset("uploads/$bottom->image") }}" alt="">
                 </section>
+                @endforeach
             </section>
 
         </section>
