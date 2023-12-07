@@ -72,6 +72,12 @@
                     <div data-i18n="Email"> کامنت ها</div>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="{{route("admin.product.index")}}" class="menu-link">
+                    <i class=" menu-icon fa-regular fa-comment" style="color: #a0a8b6;"></i>
+                    <div data-i18n="Email">  محصولات  </div>
+                </a>
+            </li>
 
 
             <!-- Layouts -->

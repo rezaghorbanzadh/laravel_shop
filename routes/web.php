@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Product\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Category\CategoryController;
@@ -61,6 +62,16 @@ Route::prefix("admin")->group(function (){
         Route::get('/' , [UserController::class , 'index'])->name('admin.user.index');
         Route::get('/adminUser' , [UserController::class , 'adminUser'])->name('admin.user.adminUser');
         Route::delete('/destroy/{user}' , [UserController::class , 'destroy'])->name('admin.user.destroy');
+
+    });
+    //admin-category
+    Route::prefix('product')->group(function(){
+        Route::get('/' , [ProductController::class , 'index'])->name('admin.product.index');
+        Route::get('/create' , [ProductController::class , 'create'])->name('admin.product.create');
+        Route::post('/store' , [ProductController::class , 'store'])->name('admin.product.store');
+        Route::get('/edit/{product}' , [ProductController::class , 'edit'])->name('admin.product.edit');
+        Route::put('/update/{product}' , [ProductController::class , 'update'])->name('admin.product.update');
+        Route::delete('/destroy/{product}' , [ProductController::class , 'destroy'])->name('admin.product.destroy');
 
     });
 

@@ -63,7 +63,7 @@
                                             <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
-                                                    <img class="" src="{{ asset("uploads/$mostVisitProduct->image") }}" alt="">
+                                                    <img class="" src="{{ asset("uploads/$mostVisitProduct->img_product") }}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>{{$mostVisitProduct->name}}</h3></section>

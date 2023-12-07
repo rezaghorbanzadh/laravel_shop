@@ -37,7 +37,7 @@
                         <label class="col-md-2 col-form-label">موقعیت</label>
                         <div class="col-md-10">
                             <select class="form-control mb-2" name="position" {{ old('position') }}>
-                                <option value="1">بنر اصلی</option>
+                                <option value="0">بنر اصلی</option>
                                 <option value="1">کنار اسلاید شو اصلی</option>
                                 <option value="2"> دو بنر تبلیغاتی بین دو اسلاید شو   </option>
                                 <option value="3"> بنر بزرگ تبلیغاتی پایین   </option>
@@ -53,7 +53,7 @@
                             <select class="form-control mb-2" name="status" {{ old('status') }}>
                                 <option value="0">غیر فعال </option>
                                 <option value="1">فعال</option>
-                               
+
                             </select>
                             @error('status')
                             <span class="text-danger mt-3">{{ $message }}</span>
