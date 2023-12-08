@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string("name");
             $table->string("color")->nullable();
             $table->string("price")->nullable();
+            $table->string("oldprice")->nullable();
             $table->text("description")->nullable();
             $table->integer("inventory")->nullable();
-            $table->integer("img_product")->nullable();
-            $table->foreignId('user_id')->constrained('users');
+            $table->string("img_product")->nullable();
             $table->integer("discount")->nullable();
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
