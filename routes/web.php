@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\Comment\CommentController;
 use App\Http\Controllers\facerController;
 use App\Http\Controllers\Customer\HomeController;
 use App\Http\Controllers\Admin\User\UserController;
+use App\Http\Controllers\Customer\Product\ProductController as Product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,7 @@ use App\Http\Controllers\Admin\User\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get("/",[HomeController::class,"index"]);
+//admin page
 Route::prefix("admin")->group(function (){
 
     //admin-dashboard
@@ -64,7 +66,7 @@ Route::prefix("admin")->group(function (){
         Route::delete('/destroy/{user}' , [UserController::class , 'destroy'])->name('admin.user.destroy');
 
     });
-    //admin-category
+    //admin-product
     Route::prefix('product')->group(function(){
         Route::get('/' , [ProductController::class , 'index'])->name('admin.product.index');
         Route::get('/create' , [ProductController::class , 'create'])->name('admin.product.create');
@@ -82,3 +84,8 @@ Route::prefix("admin")->group(function (){
 
 });
 
+
+//home page
+Route::get("/",[HomeController::class,"index"]);
+
+Route::get("/product/{product}",[Product::class,"product"])->name("home.product");

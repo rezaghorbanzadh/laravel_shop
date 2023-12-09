@@ -1,11 +1,10 @@
 @extends('customer.layouts.master-two-col')
 
 @section('head-tag')
-<title>{{ $product->name }}</title>
+<title>{{$product->name }}</title>
 @endsection
 
 @section('content')
-
 
 <!-- start cart -->
 <section class="mb-4">
@@ -30,7 +29,7 @@
                         <section class="content-wrapper bg-white p-3 rounded-2 mb-4">
                             <section class="product-gallery">
                                 <section class="product-gallery-selected-image mb-3">
-                                    <img src="assets/images/single-product/1.jpg" alt="">
+                                    <img src="{{ asset("uploads/$product->img_product") }}" alt="">
                                 </section>
                                 <section class="product-gallery-thumbs">
                                     <img class="product-gallery-thumb" src="assets/images/single-product/1.jpg" alt="" data-input="assets/images/single-product/1.jpg">

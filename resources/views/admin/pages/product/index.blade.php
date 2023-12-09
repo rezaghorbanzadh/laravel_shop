@@ -33,8 +33,8 @@
                     <td>{{ Illuminate\Support\Str::limit($product->description, 10, ' ...') }}</td>
                     <td>{{ $product->inventory }}</td>
                     <td>
-                        @if (!empty($product->image))
-                            <img style="width: 80px;" src="{{ asset("uploads/$product->image")}}" alt="{{ $product->id }}">
+                        @if (!empty($product->img_product))
+                            <img style="width: 80px;" src="{{ asset("uploads/$product->img_product")}}" alt="{{ $product->id }}">
                         @else
                             <span class="text-danger">ندارد</span>
                         @endif

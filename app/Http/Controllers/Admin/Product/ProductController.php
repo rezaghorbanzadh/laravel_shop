@@ -62,7 +62,7 @@ class ProductController extends Controller
                 $inputs['img_product'] = $image;
             }
         }
-        $inputs['user_id']=1;
+
 
 
         $product = Product::create($inputs);
