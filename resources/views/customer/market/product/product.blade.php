@@ -63,12 +63,11 @@
 
                                 <p><span>رنگ : قهوه ای</span></p>
                                 <p>
-                                    <span style="background-color: #523e02;" class="product-info-colors me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="قهوه ای تیره"></span>
-                                    <span style="background-color: #0c4128;" class="product-info-colors me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="سبز یشمی"></span>
-                                    <span style="background-color: #fd7e14;" class="product-info-colors me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نارنجی پرتقالی"></span>
+                                    <span style="background-color: {{$product->color}};" class="product-info-colors me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="  "></span>
+
                                 </p>
                                 <p><i class="fa fa-shield-alt cart-product-selected-warranty me-1"></i> <span> گارانتی اصالت و سلامت فیزیکی کالا</span></p>
-                                <p><i class="fa fa-store-alt cart-product-selected-store me-1"></i> <span>کالا موجود در انبار</span></p>
+                                <p><i class="fa fa-store-alt cart-product-selected-store me-1"></i> <span>کالا موجود در انبار</span>&ensp; {{$product->inventory}}</p>
                                 <p><a class="btn btn-light  btn-sm text-decoration-none" href="#"><i class="fa fa-heart text-danger"></i> افزودن به علاقه مندی</a></p>
                                 <section>
                                     <section class="cart-product-number d-inline-block ">
@@ -90,22 +89,46 @@
                         <section class="content-wrapper bg-white p-3 rounded-2 cart-total-price">
                             <section class="d-flex justify-content-between align-items-center">
                                 <p class="text-muted">قیمت کالا</p>
-                                <p class="text-muted">1,326,000 <span class="small">تومان</span></p>
+                                <p class="text-muted"><span id="price">{{$product->price}}</span>  <span class="small">تومان</span></p>
                             </section>
 
+
                             <section class="d-flex justify-content-between align-items-center">
-                                <p class="text-muted">تخفیف کالا</p>
-                                <p class="text-danger fw-bolder">260,000 <span class="small">تومان</span></p>
+                                @if(!empty($product->oldprice))
+                                <p class="text-muted">قیمت با تخفیف کالا</p>
+                                <p class="text-danger fw-bolder">
+
+
+                                   <span id="oldprice1">
+                                        {{$product->oldprice}} تومان
+                                   </span>
+                                    @else
+                                    <span id="oldprice2">
+                                       تخفیف ندارد
+                                   </span>
+                                    @endif
+
+                                    </p>
                             </section>
 
                             <section class="border-bottom mb-3"></section>
 
                             <section class="d-flex justify-content-end align-items-center">
-                                <p class="fw-bolder">1,066,000 <span class="small">تومان</span></p>
+                                <p class="fw-bolder" >
+                                    @if(!empty($product->oldprice))
+
+                                        <span id="oldprice1">
+                                        {{$product->oldprice}}تومان
+                                   </span>
+                                    @else
+                                        <span id="oldprice2">
+                                      {{$product->price}}تومان
+                                   </span>
+                                    @endif <span class="small"></span></p>
                             </section>
 
                             <section class="">
-                                <a id="next-level" href="#" class="btn btn-danger d-block">افزودن به سبد خرید</a>
+                                <a id="next-level" href="#" class="btn btn-danger d-block mt-1">افزودن به سبد خرید</a>
                             </section>
 
                         </section>
@@ -392,7 +415,7 @@
 
                     <section class="py-4">
 
-                        <!-- start vontent header -->
+
                         <section id="introduction" class="content-header mt-2 mb-4">
                             <section class="d-flex justify-content-between align-items-center">
                                 <h2 class="content-header-title content-header-title-small">
@@ -407,7 +430,7 @@
                             خلاصه کتاب اثر مرکب «انتخاب‌های شما تنها زمانی معنی دار است که آنها را به دلخواه به رؤیاهای خود متصل کنید. انتخاب‌های شایسته و انگیزشی، همان‌هایی هستند که شما به عنوان هدف خود و هسته اصلی زندگی خود در بالاترین ارزش‌های خود تعین می‌کنید. شما باید چیزی را بخواهید و می‌دانید که چرا شما آن را می‌خواهید یا به راحتی می‌توانید آن از دست بدهید.» «اولین گام در جهت تغییر، آگاهی است. اگر می‌خواهید از جایی که هستید به جایی که می‌خواهید بروید، باید با درک انتخاب‌هایی که شما را از مقصد مورد نظر خود دور می‌کنند، شروع کنید.» «فرمول کامل برای به دست آوردن خوش شانسی: آماده‌سازی (رشد شخصی) + نگرش (باور / ذهنیت) + فرصت (چیز خوبی که راه را هموار می‌کند) + اقدام (انجام کاری در مورد نظر) = شانس» «ما همه می‌توانیم انتخاب‌های بسیار خوبی داشته باشیم. ما می‌توانیم همه چیز را کنترل کنیم. این در توانایی ماست که همه چیز را تغییر دهیم. به جای اینکه غرق در گذشته شویم، باید دوباره انرژی خود را جمع کنیم، می‌توانیم از تجربیات گذشته برای حرکت‌های مثبت و سازنده استفاده کنیم.» برای ایجاد تغییر، ما نیاز به این داریم که عادات و رفتار خوب را ایجاد کنیم، که در کتاب از آن به عنوان تکانش یاد می شود. تکانش بدین معنی که با ریتم منظم و دائمی و ثبات قدم همراه باشید. حرکت های افراطی و تفریطی، موضع های عجله ای و جوگیر شدن و عدم ریتم مناسب موجب خواهد شد که ثبات قدم نداشته باشیم و حتی شاید از مسیر اصلی دور شویم و تکانش ما با لرزه های فراوان و یا حتی سکون و سکوت مواجه شود. واقعیت رهرو آن است که آهسته و پیوسته رود اینجا پدیدار می گردد و باید همیشه بدانیم هیچ چیز مثل عدم ثبات قدم و نداشتن ریتم مناسب در زمان تغییر، نمی تواند تکانش را با مشکل مواجه کند! متن بالا شاید بهترین خلاصه ای باشد که می شود از کتاب نوشت!
                         </section>
 
-                        <!-- start vontent header -->
+
                         <section id="features" class="content-header mt-2 mb-4">
                             <section class="d-flex justify-content-between align-items-center">
                                 <h2 class="content-header-title content-header-title-small">
@@ -434,7 +457,7 @@
                                 </tr>
                                 <tr>
                                     <td>نوع جلد</td>
-                                    <td>شومیز</td>
+                                    <td>
                                 </tr>
                                 <tr>
                                     <td>نویسنده/نویسندگان</td>
@@ -548,7 +571,7 @@
                             <section class="product-comment">
                                 <section class="product-comment-header d-flex justify-content-start">
                                     <section class="product-comment-date">۲۱ مرداد ۱۴۰۰</section>
-                                    <section class="product-comment-title">حسین رحیمی دهنوی</section>
+                                    <section class="product-comment-title">حسین رحیمی دهنوی/section>
                                 </section>
                                 <section class="product-comment-body">
                                     این کتاب رو هر کسی باید حداقل یکبار تو زندگیش بخونه واقعا کتاب خوبیه
