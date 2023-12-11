@@ -15,4 +15,10 @@ class ProductController extends Controller
     }
 
 
+
+    public function add_favorite(Product $product){
+        dd($product);
+    }
+
+
 }

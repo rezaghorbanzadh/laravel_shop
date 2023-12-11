@@ -60,7 +60,20 @@
                                     <section class="lazyload-item-wrapper">
                                         <section class="product">
                                             <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
+                                            @auth
+                                                @if($mostVisitProduct->user->contains(auth()->user()->id))
+                                                    <section class="product-add-to-favorite">
+                                                        <a href="{{route("home.product.add_favorite",$mostVisitProduct->id)}}" data-bs-toggle="tooltip" data-bs-placement="left" title="حذف  از علاقه مندی">
+                                                            <i class="fa fa-heart"></i>
+                                                        </a></section>
+                                                @else
+                                                    <section class="product-add-to-favorite">
+                                                        <a href="{{route("home.product.add_favorite",$mostVisitProduct->id)}}" data-bs-toggle="tooltip" data-bs-placement="left" title=" افزودن علاقه مندی">
+                                                            <i class="fa fa-heart"></i>
+                                                        </a></section>
+                                                @endif
+                                            @endauth
+                                            <section class="product-add-to-favorite"><a href="{{route("home.product.add_favorite",$mostVisitProduct->id)}}" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="{{route("home.product",$mostVisitProduct->id)}}">
                                                 <section class="product-image">
                                                     <img class="" src="{{ asset("uploads/$mostVisitProduct->img_product") }}" alt="">
@@ -167,7 +180,7 @@
                                     <section class="lazyload-item-wrapper">
                                         <section class="product">
                                             <section class="product-add-to-cart"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به سبد خرید"><i class="fa fa-cart-plus"></i></a></section>
-                                            <section class="product-add-to-favorite"><a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
+                                            <section class="product-add-to-favorite"><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="#">
                                                 <section class="product-image">
                                                     <img class="" src="{{ asset('assets/customer-assets/images/products/1.jpg') }}" alt="">

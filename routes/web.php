@@ -87,5 +87,9 @@ Route::prefix("admin")->group(function (){
 
 //home page
 Route::get("/",[HomeController::class,"index"]);
-
 Route::get("/product/{product}",[Product::class,"product"])->name("home.product");
+Route::get("/product/add_favorite/{product}",[Product::class,"add_favorite"])->name("home.product.add_favorite");
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

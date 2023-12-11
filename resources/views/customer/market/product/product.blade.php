@@ -99,11 +99,11 @@
                                 <p class="text-danger fw-bolder">
 
 
-                                   <span id="oldprice1">
+                                   <span >
                                         {{$product->oldprice}} تومان
                                    </span>
                                     @else
-                                    <span id="oldprice2">
+                                    <span >
                                        تخفیف ندارد
                                    </span>
                                     @endif
@@ -117,11 +117,11 @@
                                 <p class="fw-bolder" >
                                     @if(!empty($product->oldprice))
 
-                                        <span id="oldprice1">
+                                        <span >
                                         {{$product->oldprice}}تومان
                                    </span>
                                     @else
-                                        <span id="oldprice2">
+                                        <span >
                                       {{$product->price}}تومان
                                    </span>
                                     @endif <span class="small"></span></p>
@@ -598,6 +598,5 @@
         </section>
     </section>
 </section>
-<!-- end description, features and comments -->
 
 @endsection

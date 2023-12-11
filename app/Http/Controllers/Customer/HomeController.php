@@ -6,10 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Banner;
 use App\Models\Admin\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
     public function index(){
+        Auth::loginUsingId(1);
+
         $slideShow=Banner::where("position",0)->where("status",1)->get();
         $topBanners=Banner::where("position",1)->where("status",1)->take(2)->get();
         $middleBanners=Banner::where("position",2)->where("status",1)->take(2)->get();
