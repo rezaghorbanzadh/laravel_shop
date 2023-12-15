@@ -22,7 +22,7 @@
                 @foreach($topBanners as $topBanner)
                 <section class="mb-2">
                     <a href="#" class="d-block">
-                        <img class="w-100 rounded-2" src="{{ asset("uploads/$topBanner->image") }}" alt="">
+                        <img class="w-100 rounded-2" src="{{ asset("uploads/$topBanner->image")}}" alt="">
                     </a>
                 </section>
                 @endforeach
@@ -76,7 +76,7 @@
                                             <section class="product-add-to-favorite"><a href="{{route("home.product.add_favorite",$mostVisitProduct->id)}}" data-bs-toggle="tooltip" data-bs-placement="left" title="افزودن به علاقه مندی"><i class="fa fa-heart"></i></a></section>
                                             <a class="product-link" href="{{route("home.product",$mostVisitProduct->id)}}">
                                                 <section class="product-image">
-                                                    <img class="" src="{{ asset("uploads/$mostVisitProduct->img_product") }}" alt="">
+                                                    <img class="" src="{{ asset("uploads/$mostVisitProduct->img_product")}}" alt="">
                                                 </section>
                                                 <section class="product-colors"></section>
                                                 <section class="product-name"><h3>{{$mostVisitProduct->name}}</h3></section>
@@ -87,7 +87,7 @@
                                                         <span class="product-discount-amount">{{$mostVisitProduct->discount}}%</span>
                                                     </section>
                                                     @endif
-                                                    <section class="product-price">{{$mostVisitProduct->price}} تومان</section>
+                                                    <section class="product-price">{{$mostVisitProduct->price}}تومان</section>
                                                 </section>
                                                 <section class="product-colors">
                                                     <section class="product-colors-item" style="background-color: white;"></section>
